@@ -1,6 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-  fetchPictureData();
+  // fetchPictureData();
+  renderLoginForm();
 });
+
+const renderLoginForm = () => {
+  
+};
 
 const fetchPictureData = () => {
   fetch('http://localhost:3000/pictures')
@@ -13,7 +18,10 @@ const renderPictureData = (pictures) => {
   pictures.forEach(picture => {
     let imgContainer = document.createElement('div');
     let img = document.createElement('img');
+
     img.src = picture['img_url'];
+    img.classList.add('plane-picture');
+    imgContainer.classList.add('picture-container');
 
     testDiv.appendChild(imgContainer);
     imgContainer.appendChild(img);
