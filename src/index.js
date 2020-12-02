@@ -9,14 +9,13 @@ const fetchPictureData = () => {
 };
 
 const renderPictureData = (pictures) => {
-  const testDiv = document.getElementById('test')
-  console.log(testDiv)
+  const testDiv = document.getElementById('test');
   pictures.forEach(picture => {
-    let imgContainer = document.createElement('div')
-    let img = document.createElement('img')
-    img.src = picture['img_url']
+    let imgContainer = document.createElement('div');
+    let img = document.createElement('img');
+    img.src = picture['img_url'];
 
-    testDiv.appendChild(imgContainer)
-    imgContainer.appendChild(img)
+    testDiv.appendChild(imgContainer);
+    imgContainer.appendChild(img);
   });
 };
