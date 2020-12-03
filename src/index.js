@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // fetchPictureData();
   hideForm();
   loginButtonListener();
+  submitFormListener();
 });
 
 const hideForm = () => {
@@ -32,23 +33,34 @@ const renderReturningUserForm = () => {
   document.getElementById('new-user-inputs').style.display = 'none';
 };
 
-const fetchPictureData = () => {
-  fetch('http://localhost:3000/pictures')
-    .then(res => res.json())
-    .then(data => renderPictureData(data))
-};
-
-const renderPictureData = (pictures) => {
-  const testDiv = document.querySelector('body');
-  pictures.forEach(picture => {
-    let imgContainer = document.createElement('div');
-    let img = document.createElement('img');
-
-    img.src = picture['img_url'];
-    img.classList.add('plane-picture');
-    imgContainer.classList.add('picture-container');
-
-    testDiv.appendChild(imgContainer);
-    imgContainer.appendChild(img);
+const submitFormListener = () => {
+  const loginForm = document.getElementById('login-form');
+  loginForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    
   });
 };
+
+
+
+
+// const fetchPictureData = () => {
+//   fetch('http://localhost:3000/pictures')
+//     .then(res => res.json())
+//     .then(data => renderPictureData(data))
+// };
+
+// const renderPictureData = (pictures) => {
+//   const testDiv = document.querySelector('body');
+//   pictures.forEach(picture => {
+//     let imgContainer = document.createElement('div');
+//     let img = document.createElement('img');
+
+//     img.src = picture['img_url'];
+//     img.classList.add('plane-picture');
+//     imgContainer.classList.add('picture-container');
+
+//     testDiv.appendChild(imgContainer);
+//     imgContainer.appendChild(img);
+//   });
+// };
