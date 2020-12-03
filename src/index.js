@@ -1,10 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
   // fetchPictureData();
-  renderLoginForm();
+  hideForm();
+  loginButtonListener();
 });
 
-const renderLoginForm = () => {
-  
+const hideForm = () => {
+  const loginForm = document.getElementById('login-form');
+  loginForm.style.display = 'none';
+};
+
+const loginButtonListener = () => {
+  const newUserButton = document.getElementById('new-user');
+  const returningUserButton = document.getElementById('returning-user')
+
+  newUserButton.addEventListener('click', () => {
+    renderNewUserForm();
+  });
+
+  returningUserButton.addEventListener('click', () => {
+    renderReturningUserForm();
+  });
+};
+
+const renderNewUserForm = () => {
+  document.getElementById('login-form').style.display = 'block';
+  document.getElementById('new-user-inputs').style.display = 'block';
+};
+
+const renderReturningUserForm = () => {
+  document.getElementById('login-form').style.display = 'block';
+  document.getElementById('new-user-inputs').style.display = 'none';
 };
 
 const fetchPictureData = () => {
@@ -14,7 +39,7 @@ const fetchPictureData = () => {
 };
 
 const renderPictureData = (pictures) => {
-  const testDiv = document.getElementById('test');
+  const testDiv = document.querySelector('body');
   pictures.forEach(picture => {
     let imgContainer = document.createElement('div');
     let img = document.createElement('img');
