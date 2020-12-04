@@ -9,21 +9,22 @@
   </head>
   <body>
     <div class="login-container">
-      <h1 class="heading">Login</h3>
+      <h1 class="heading" id="header">Login</h1>
+      <div id="error-notice"></div>
       <div id="login-form-container">
         <form id="login-form">
           <div id="new-user-inputs">
             <label>First Name: </label>
-            <input type="text-field"><br>
+            <input type="text-field" class="input-field" id="first-name-input"><br>
     
             <label>Last Name: </label>
-            <input type="text-field"><br>
+            <input type="text-field" class="input-field" id="last-name-input"><br>
           </div>
           <div id="returning-user-input">
             <label>Username: </label>
-            <input type="text-field"><br>
+            <input type="text-field" class="input-field" id="username-input"><br>
           </div>
-          <button>Submit Form</button>
+          <button class="submit-button">Submit</button>
         </form>
       </div>
       <div class="button">
