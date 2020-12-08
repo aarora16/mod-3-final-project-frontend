@@ -1,14 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>Plane Spotting</title>
     <script src="./src/index.js" ></script>
-    <link rel="stylesheet" href="./assets/style.css" />
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" /> -->
+    <link rel="stylesheet" type="text/css" href="./assets/styles.css" />
   </head>
   <body>
-    <div id="test">
-      
+    <div class="login-container">
+      <h1 class="heading" id="header">Login</h1>
+      <div id="error-notice"></div>
+      <div id="login-form-container">
+        <form id="login-form">
+          <div id="new-user-inputs">
+            <label>First Name: </label>
+            <input type="text-field" class="input-field" id="first-name-input"><br>
+    
+            <label>Last Name: </label>
+            <input type="text-field" class="input-field" id="last-name-input"><br>
+          </div>
+          <div id="returning-user-input">
+            <label>Username: </label>
+            <input type="text-field" class="input-field" id="username-input"><br>
+          </div>
+          <button class="submit-button">Submit</button>
+        </form>
+      </div>
+      <div class="button">
+        <button id="new-user" class="action-button">New User</button>
+        <button id="returning-user" class="action-button">Returning User</button>
+      </div>
     </div>
   </body>
 </html>
