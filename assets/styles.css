@@ -67,3 +67,44 @@ body {
 #error-notice {
   color: red;
 }
+
+.gallery {
+  margin: 10px;
+  border: 1px solid black;
+  /* float: left; */
+  display: inline-block;
+  position: relative;
+  width: 300px;
+  background-color: whitesmoke;
+  overflow: hidden;
+}
+
+.gallery:hover {
+  border: 1px solid rgb(196, 196, 196);
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+.pictures {
+  height: 100%;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.desc {
+  text-align: center;
+  padding: 15px;
+}
+
+.user-welcome {
+  text-align: center;
+  margin: 20px;
+}
+
+.other-button {
+  margin: 5px;
+}
